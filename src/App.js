@@ -1,13 +1,12 @@
-import React from "react";
-import configurationSteps from "./store/configurationSteps";
-import projectTestingSteps from "./store/projectTestingSteps";
-import List from "./components/List";
-import ListItem from "./components/ListItem";
+import React from 'react';
+import configurationSteps from './store/configurationSteps';
+import projectTestingSteps from './store/projectTestingSteps';
+import List from './components/List';
+import ListItem from './components/ListItem';
+/* import Face from '@material-symbols/svg-400/outlined/face.svg'; */
 
 const App = function () {
-  const items = configurationSteps.map((step, index) => (
-    <ListItem itemText={step} key={index} />
-  ));
+  const items = configurationSteps.map((step, index) => <ListItem itemText={step} key={index} />);
   const testingItems = projectTestingSteps.map((step, index) => (
     <ListItem itemText={step} key={index} />
   ));
@@ -16,15 +15,15 @@ const App = function () {
     <>
       <div className="container">
         <h1>78_from_zero_to_microfrontend</h1>
-        <div class="alert alert-success">
-          React root-component rendered in div#root
-        </div>
+        <div class="alert alert-success">React root-component rendered in div#root</div>
         <h3>Configuration steps</h3>
         <List>{items}</List>
         <h3>React testing steps</h3>
         <List>{testingItems}</List>
         <div class="alert alert-danger">Project started with Bootstrap</div>
 
+        {/* <Face /> */}
+        <span class="material-symbols-outlined">face</span>
         <button
           type="button"
           class="btn btn-primary"
@@ -56,11 +55,7 @@ const App = function () {
               </div>
               <div class="modal-body">...</div>
               <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                   Close
                 </button>
                 <button type="button" class="btn btn-primary">
