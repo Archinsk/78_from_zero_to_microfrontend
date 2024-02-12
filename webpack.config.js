@@ -39,14 +39,19 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'fonts',
+        test: /\.(jpg|jpeg|png|svg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff2|woff|ttf|eot|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      /* title: 'From Zero to Hero', */
     }),
   ],
 };

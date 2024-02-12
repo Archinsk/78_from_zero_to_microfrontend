@@ -1,0 +1,20 @@
+@font-face {
+  font-family: material;
+  src: url(../node_modules/@material-symbols/font-400/material-symbols-outlined.woff2)
+    format('woff2');
+}
+
+.material {
+  font-family: material;
+}
+
+h1 {
+  color: green;
+}
+
+.image-container {
+  width: 12.5rem;
+  height: 12.5rem;
+  background-image: url('./assets/images/default.jpg');
+  background-size: cover;
+}
